@@ -1,0 +1,19 @@
+generated: '2026-07-20'
+method: searched
+source: https://app.machine0.io/.well-known/oauth-authorization-server
+description: >-
+  OAuth scopes advertised by machine0's authorization server metadata
+  (scopes_supported). These are OIDC-standard identity scopes gating the OAuth
+  authorization-code flow used by the CLI and MCP clients; machine0 does not
+  publish granular per-resource (VM/image) scopes — infrastructure authorization
+  is bound to the authenticated account rather than fine-grained scopes.
+docs: https://docs.machine0.io/mcp/overview
+scopes:
+  - name: openid
+    description: OIDC authentication; issue an ID token identifying the account.
+  - name: profile
+    description: Access to the account's basic profile claims (name).
+  - name: email
+    description: Access to the account's email and email_verified claims.
+  - name: offline_access
+    description: Issue a refresh token for long-lived, non-interactive access.

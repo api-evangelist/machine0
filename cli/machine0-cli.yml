@@ -1,0 +1,73 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.machine0.io/cli/overview
+description: >-
+  The machine0 CLI is the primary interface to the product ("Cloud VMs from the
+  CLI") — every operation is a command and every list/detail command supports
+  --json for programmatic output. The CLI binary is catalogued in
+  packages/machine0-packages.yml (npm @machine0/cli); this artifact enumerates its
+  command/resource surface. Captured verbatim from docs.machine0.io/cli.
+docs: https://docs.machine0.io/cli/overview
+install:
+  shell: curl -LsSf https://machine0.io/install.sh | sh
+  npm: npm install -g @machine0/cli   # requires Node.js >= 20.12
+auth:
+  login: machine0 login          # browser-based OAuth flow
+  logout: machine0 logout        # revokes token
+  env: MACHINE0_API_TOKEN        # for automation / non-interactive use
+  detail: authentication/machine0-authentication.yml
+commands:
+  machines:
+    - {name: new, description: Create a virtual machine.}
+    - {name: ls, description: List virtual machines.}
+    - {name: get, description: Get a virtual machine.}
+    - {name: start, description: Start a stopped/suspended VM.}
+    - {name: stop, description: Stop a VM (resources reserved, still billed).}
+    - {name: reboot, description: Reboot a VM.}
+    - {name: suspend, description: Suspend a VM and freeze state (compute billing stops).}
+    - {name: rm, description: Destroy a VM.}
+    - {name: ssh, description: Open an SSH session to a VM.}
+    - {name: update, description: Update a VM.}
+    - {name: provision, description: Provision a VM (NixOS flake or Ubuntu/Ansible).}
+    - {name: sizes, description: List available sizes and pricing.}
+  images:
+    - {name: ls, description: List images/snapshots.}
+    - {name: get, description: Get an image.}
+    - {name: new, description: Snapshot a VM into an image.}
+    - {name: update, description: Update an image.}
+    - {name: rm, description: Remove an image.}
+  disks:
+    - {name: new, description: Create a persistent disk (experimental).}
+    - {name: ls, description: List disks.}
+    - {name: get, description: Inspect a disk.}
+    - {name: rm, description: Remove a disk.}
+  env_sets:
+    - {name: ls, description: List environment variable sets.}
+    - {name: get, description: Get an env set.}
+    - {name: new, description: Create an env set.}
+    - {name: set, description: Set a variable in an env set.}
+    - {name: unset, description: Unset a variable.}
+    - {name: rm, description: Remove an env set.}
+  ssh_keys:
+    - {name: ls, description: List SSH keys.}
+    - {name: get, description: Get an SSH key.}
+    - {name: new, description: Create/register an SSH key.}
+    - {name: update, description: Update an SSH key.}
+    - {name: rm, description: Remove an SSH key.}
+  sync:
+    - {name: sync push, description: Push files from local machine to a VM.}
+    - {name: sync pull, description: Pull files from a VM to local machine.}
+  profiles_integrations:
+    - {name: profiles, description: Named groups of integrations (Claude Code, Codex, GitHub, remote MCP servers), prompts and env vars, each with its own MCP endpoint (experimental).}
+    - {name: integrations, description: Connect Claude Code, Codex, GitHub and remote MCP servers to a profile with per-profile credentials.}
+    - {name: prompts, description: Named text templates stored on a profile, served over its MCP endpoint as slash commands.}
+    - {name: vars, description: Env variables stored on a profile and injected into every VM created with it (optional write-only secrets).}
+  account_config:
+    - {name: account, description: Show account details and billing.}
+    - {name: topup, description: Top up account balance.}
+    - {name: config get, description: Read a config value.}
+    - {name: config set, description: Set a config value.}
+  quick_launch:
+    - {name: use openclaw, description: Quick-launch an OpenClaw environment.}
+    - {name: use webserver, description: Quick-launch a web server VM.}
+json_output: Every list/detail command supports --json for machine-readable output.

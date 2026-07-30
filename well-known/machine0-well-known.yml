@@ -1,0 +1,62 @@
+generated: '2026-07-20'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface for machine0's hosts
+  (app.machine0.io control plane, machine0.io marketing site, docs.machine0.io).
+  Status is the HTTP code observed at fetch time. app.machine0.io is a React SPA
+  that returns 200 with a text/html shell for arbitrary /.well-known/ paths
+  (security.txt, openid-configuration, api-catalog, ai-plugin.json), so those are
+  recorded as present-but-not-a-real-document and NOT saved. Only the OAuth
+  discovery documents returned real, correctly-typed JSON and were saved verbatim.
+hosts:
+  - host: https://app.machine0.io
+    documents:
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        type: application/json
+        note: 307 -> /api/auth/.well-known/oauth-protected-resource
+        file: machine0-mcp-oauth-protected-resource.json
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        type: application/json
+        file: machine0-oauth-authorization-server.json
+      - path: /.well-known/security.txt
+        status: 200
+        type: text/html
+        note: SPA shell, not a real security.txt; not saved.
+      - path: /.well-known/openid-configuration
+        status: 200
+        type: text/html
+        note: SPA shell, not real OIDC discovery; not saved.
+      - path: /.well-known/api-catalog
+        status: 200
+        type: text/html
+        note: SPA shell, not a real api-catalog; not saved.
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        type: text/html
+        note: SPA shell, not a real ai-plugin manifest; not saved.
+  - host: https://machine0.io
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://docs.machine0.io
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404

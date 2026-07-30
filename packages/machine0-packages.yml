@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://registry.npmjs.org/@machine0/cli
+description: >-
+  First-party machine0 client tooling. The product is CLI-first; the CLI is
+  distributed as the npm package @machine0/cli (also installable via the
+  install.sh shell script). Verified against the public npm registry; latest
+  version and description recorded at fetch time.
+packages:
+  - language: javascript
+    registry: npm
+    name: "@machine0/cli"
+    url: https://www.npmjs.com/package/@machine0/cli
+    install: npm install -g @machine0/cli
+    latest: 1.0.138
+    description: Cloud VMs from the CLI.
+    requires: Node.js >= 20.12
+    official: true
+    note: >-
+      Also installable via `curl -LsSf https://machine0.io/install.sh | sh`.
+      Command surface catalogued in cli/machine0-cli.yml.

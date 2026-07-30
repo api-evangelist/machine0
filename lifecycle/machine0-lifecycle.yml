@@ -1,0 +1,45 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://machine0.io/changelog, https://docs.machine0.io/introduction/pricing,
+  https://docs.machine0.io/cli/overview
+description: >-
+  Versioning, billing and availability posture for machine0. The product is
+  versioned with a single semantic version shared across the CLI, MCP server and
+  mobile apps; there is a dated changelog but no separate REST API version header
+  or dated version train. machine0 markets 99.99% uptime across 5 regions but
+  publishes no numeric SLA document and no public status page.
+versioning:
+  scheme: semver
+  current: 1.0.138
+  mechanism: CLI/package version (npm @machine0/cli); no API-level version header
+  changelog: https://machine0.io/changelog
+  detail: changelog/machine0-changelog.yml
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: >-
+    No published RFC 8594 Sunset/Deprecation policy. Feature removals are
+    announced in the changelog (e.g. experimental "folders" replaced by disks
+    in 1.0.136; experimental "gateways" retired for profiles in 1.0.127).
+sla:
+  url: null
+  public_uptime_target: '99.99%'
+  notes: >-
+    "99.99% uptime" is stated as a marketing claim on machine0.io; no numeric
+    SLA legal document is published.
+status_page:
+  url: null
+  notes: >-
+    No live public status page found. A machine0.instatus.com subdomain exists
+    but redirects to instatus.com (placeholder, not a provisioned status page).
+regions: [us-east, us-west, uk, eu, asia]
+billing:
+  model: per-minute pay-as-you-go, no commitments, same price in every region
+  compute_from: $0.013/hour (small, 1 vCPU / 1GB)
+  compute_to: $3.714/hour (6xl, 60 vCPU / 240GB)
+  gpu_from: $0.836/hour (gpu-4000ada-1, 20GB VRAM)
+  gpu_to: $30.272/hour (gpu-h200-8, 1128GB VRAM)
+  storage: images/snapshots $0.078/GB/month; persistent disks ~$0.1667/GB/month
+  bandwidth: 1-10 TB free per size, then $0.01/GiB overage
+  docs: https://docs.machine0.io/introduction/pricing

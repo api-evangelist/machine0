@@ -1,0 +1,64 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://docs.machine0.io/mcp/overview
+description: >-
+  Machine0 operates an official remote MCP server at https://app.machine0.io/mcp
+  (Streamable HTTP transport, stateless, JSON responses) that gives AI agents the
+  same infrastructure control as the CLI. Authentication is OAuth (RFC 9728
+  protected resource; discovery documents captured under well-known/) for
+  interactive clients, or an x-api-key header for programmatic access. The tool
+  list is captured verbatim from the machine0 MCP documentation.
+server:
+  name: machine0
+  transport: http
+  url: https://app.machine0.io/mcp
+  auth: oauth2
+  auth_alt: api-key (x-api-key header)
+  protected_resource: well-known/machine0-mcp-oauth-protected-resource.json
+  authorization_server: well-known/machine0-oauth-authorization-server.json
+  authorization_endpoint: https://app.machine0.io/api/auth/mcp/authorize
+  token_endpoint: https://app.machine0.io/api/auth/mcp/token
+  registration_endpoint: https://app.machine0.io/api/auth/mcp/register
+  pkce: S256
+docs: https://docs.machine0.io/mcp/overview
+note: >-
+  A per-profile aggregated MCP endpoint is also available, exposing connected
+  integrations (Claude Code, Codex, GitHub, remote MCP servers), profile prompts
+  as slash commands, and profile vars to Claude clients (see cli/machine0-cli.yml
+  profiles/integrations). Tool prefixes and whitelists are configurable.
+tools:
+  machines:
+    - {name: vm_list, description: List virtual machines.}
+    - {name: vm_get, description: Get a virtual machine by id.}
+    - {name: vm_get_by_name, description: Get a virtual machine by name.}
+    - {name: vm_create, description: Create a new virtual machine.}
+    - {name: vm_update, description: Update a virtual machine.}
+    - {name: vm_start, description: Start a virtual machine.}
+    - {name: vm_stop, description: Stop a virtual machine (resources reserved).}
+    - {name: vm_reboot, description: Reboot a virtual machine.}
+    - {name: vm_suspend, description: Suspend a virtual machine and stop compute billing.}
+    - {name: vm_destroy, description: Destroy a virtual machine.}
+  images:
+    - {name: image_list, description: List images.}
+    - {name: image_get, description: Get an image.}
+    - {name: image_create, description: Create an image (snapshot) from a VM.}
+    - {name: image_create_version, description: Create a new version of an image.}
+    - {name: image_update, description: Update an image.}
+    - {name: image_destroy, description: Destroy an image.}
+    - {name: image_version_list, description: List image versions.}
+    - {name: image_version_get, description: Get an image version.}
+    - {name: image_version_promote, description: Promote an image version.}
+    - {name: image_version_remove, description: Remove an image version.}
+  ssh_keys:
+    - {name: ssh_key_list, description: List SSH keys.}
+    - {name: ssh_key_get, description: Get an SSH key.}
+    - {name: ssh_key_get_default, description: Get the default SSH key.}
+    - {name: ssh_key_create_public, description: Register a public SSH key.}
+    - {name: ssh_key_create_managed, description: Create a server-managed SSH keypair (required for ssh_exec).}
+    - {name: ssh_key_update, description: Update an SSH key.}
+    - {name: ssh_key_destroy, description: Destroy an SSH key.}
+  ssh_exec:
+    - {name: ssh_exec, description: Run a command on a VM via SSH; requires a managed key.}
+  sizes:
+    - {name: size_list, description: List available VM sizes with pricing and regional availability.}

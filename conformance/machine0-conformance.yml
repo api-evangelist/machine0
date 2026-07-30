@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  Derived from the OAuth discovery documents saved under well-known/ and the MCP
+  documentation (https://docs.machine0.io/mcp/overview). Each entry records
+  whether machine0 conforms to a cross-cutting standard, with evidence.
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      RFC 6749 authorization-code flow with authorization_endpoint /
+      token_endpoint published in
+      /.well-known/oauth-authorization-server.
+  - id: oauth2-authorization-server-metadata
+    conforms: true
+    evidence: RFC 8414 metadata document served at app.machine0.io.
+  - id: oauth2-protected-resource-metadata
+    conforms: true
+    evidence: >-
+      RFC 9728 protected-resource metadata served for the MCP endpoint
+      (well-known/machine0-mcp-oauth-protected-resource.json).
+  - id: oauth2-pkce
+    conforms: true
+    evidence: code_challenge_methods_supported = [S256].
+  - id: oauth2-dynamic-client-registration
+    conforms: true
+    evidence: RFC 7591 registration_endpoint published.
+  - id: oidc
+    conforms: partial
+    evidence: >-
+      openid/profile/email scopes, a userinfo_endpoint, RS256 id_token signing
+      and OIDC claims are advertised, but no valid
+      /.well-known/openid-configuration document is served (the path returns an
+      SPA shell), so full OIDC discovery conformance is not met.
+  - id: mcp
+    conforms: true
+    evidence: >-
+      Official remote MCP server (Streamable HTTP, stateless, JSON) at
+      app.machine0.io/mcp with 29 documented tools.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No documented application/problem+json error envelope.
+  - id: fapi
+    conforms: false
+    evidence: No Financial-grade API profile claim (not a financial API).
+  - id: scim
+    conforms: false
+    evidence: No SCIM provisioning endpoint documented.

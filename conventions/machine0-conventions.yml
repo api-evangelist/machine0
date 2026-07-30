@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.machine0.io/cli/overview, https://docs.machine0.io/mcp/overview,
+  https://docs.machine0.io/introduction/pricing
+description: >-
+  Cross-cutting semantics for interacting with machine0. machine0 has no public
+  REST API surface — the programmatic contract is the CLI (every command with a
+  --json mode) and the remote MCP server (Streamable HTTP, stateless, JSON). This
+  profile captures the conventions that span every operation.
+access_surfaces:
+  cli:
+    package: "@machine0/cli"
+    json: Every list/detail command supports --json for machine-readable output.
+    detail: cli/machine0-cli.yml
+  mcp:
+    url: https://app.machine0.io/mcp
+    transport: Streamable HTTP, stateless, JSON responses
+    detail: mcp/machine0-mcp.yml
+authentication:
+  interactive: OAuth 2.0 authorization-code + PKCE (machine0 login / MCP OAuth)
+  programmatic: x-api-key header (MCP) or MACHINE0_API_TOKEN env var (CLI)
+  detail: authentication/machine0-authentication.yml
+idempotency:
+  supported: false
+  notes: >-
+    No client idempotency-key mechanism is documented. Resource operations are
+    addressed by stable ids/names (vm_get_by_name), and lifecycle verbs
+    (start/stop/suspend) are naturally idempotent on state, but there is no
+    published Idempotency-Key header.
+resource_identity:
+  by_id: vm_get / image_get use server-assigned ids
+  by_name: vm_get_by_name resolves a VM by its user-given name
+versioning:
+  mechanism: Single semver across CLI/MCP/apps; no per-request API version header.
+  detail: lifecycle/machine0-lifecycle.yml
+rate_limiting:
+  notes: >-
+    machine0 handles upstream cloud-provider rate limits internally (changelog
+    1.0.134); no documented client-facing rate-limit response headers.
+profiles:
+  notes: >-
+    A "profile" is a named group of integrations, prompts and env vars, each
+    exposing its own aggregated MCP endpoint and injecting vars (with optional
+    write-only secrets) into every VM created with it.
+regions: [us-east, us-west, uk, eu, asia]

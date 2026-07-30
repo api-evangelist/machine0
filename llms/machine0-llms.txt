@@ -1,0 +1,45 @@
+# [ m0 ] DOCUMENTATION
+
+> Cloud VMs from the CLI
+
+## Docs
+
+- [Account](https://docs.machine0.io/cli/account.md): CLI reference for authentication, billing, and configuration.
+- [Disks](https://docs.machine0.io/cli/disks.md): CLI reference for creating, inspecting, listing, and removing persistent disks (experimental).
+- [Env Sets](https://docs.machine0.io/cli/env.md): CLI reference for managing environment variable sets.
+- [Images](https://docs.machine0.io/cli/images.md): CLI reference for managing images and snapshots.
+- [Integrations](https://docs.machine0.io/cli/integrations.md): CLI reference for integrations — connect Claude Code, Codex, GitHub, and remote MCP servers to a profile, with per-profile credentials.
+- [SSH Keys](https://docs.machine0.io/cli/keys.md): CLI reference for managing SSH keys.
+- [Machines](https://docs.machine0.io/cli/machines.md): CLI reference for creating, managing, and connecting to VMs.
+- [CLI](https://docs.machine0.io/cli/overview.md)
+- [Profiles](https://docs.machine0.io/cli/profiles.md): CLI reference for profiles — named groups of integrations (Claude Code, Codex, GitHub, remote MCP servers), prompts, and env variables, each with its own MCP endpoint.
+- [Prompts](https://docs.machine0.io/cli/prompts.md): CLI reference for prompts — named text templates stored on a profile and served over its MCP endpoint as slash commands.
+- [Sync](https://docs.machine0.io/cli/sync.md): CLI reference for syncing files between your local machine and VMs.
+- [Profile variables](https://docs.machine0.io/cli/vars.md): CLI reference for vars — env variables stored on a profile and injected into every VM created with it, with optional write-only secrets.
+- [Running Claude Code & Codex](https://docs.machine0.io/examples/coding-agents.md)
+- [Running Hermes](https://docs.machine0.io/examples/hermes.md)
+- [Hosting](https://docs.machine0.io/examples/hosting.md)
+- [Reproducible NixOS Builds](https://docs.machine0.io/examples/nixos.md)
+- [Running OpenClaw](https://docs.machine0.io/examples/openclaw.md)
+- [FAQ](https://docs.machine0.io/introduction/faq.md)
+- [Cloud VMs from the CLI](https://docs.machine0.io/introduction/overview.md)
+- [Pricing](https://docs.machine0.io/introduction/pricing.md)
+- [Quickstart](https://docs.machine0.io/introduction/quickstart.md)
+- [Images](https://docs.machine0.io/mcp/images.md): MCP tools for managing images and versions.
+- [SSH Keys](https://docs.machine0.io/mcp/keys.md): MCP tools for managing SSH keys.
+- [Machines](https://docs.machine0.io/mcp/machines.md): MCP tools for creating, managing, and destroying virtual machines.
+- [MCP](https://docs.machine0.io/mcp/overview.md): Connect AI agents to machine0 using the Model Context Protocol.
+- [Sizes](https://docs.machine0.io/mcp/sizes.md): MCP tool for listing VM sizes and pricing.
+- [SSH Exec](https://docs.machine0.io/mcp/ssh.md): Execute commands on VMs remotely via MCP.
+- [Configuration](https://docs.machine0.io/platform/configuration.md)
+- [Environments](https://docs.machine0.io/platform/environments.md)
+- [Images](https://docs.machine0.io/platform/images.md)
+- [Networking](https://docs.machine0.io/platform/networking.md)
+- [Provisioning](https://docs.machine0.io/platform/provisioning.md)
+- [Security](https://docs.machine0.io/platform/security.md)
+- [SSH](https://docs.machine0.io/platform/ssh.md)
+- [Machines](https://docs.machine0.io/platform/vm-management.md)
+
+## OpenAPI Specs
+
+- [openapi](https://docs.machine0.io/api-reference/openapi.json)

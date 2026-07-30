@@ -1,0 +1,57 @@
+generated: '2026-07-20'
+method: searched
+source: https://machine0.io/changelog
+description: >-
+  Structured capture of machine0's dated product changelog. machine0 ships the
+  CLI, MCP server and companion iPhone/iPad apps under a single semantic version
+  (X.Y.Z, occasionally X.Y.Z.W for app-only point releases), matching the npm
+  @machine0/cli version. Recent window only; the live changelog is the source of
+  truth.
+docs: https://machine0.io/changelog
+versioning:
+  scheme: semver (X.Y.Z, X.Y.Z.W)
+  current: 1.0.138
+  detail: lifecycle/machine0-lifecycle.yml
+entries:
+  - version: '1.0.138'
+    date: '2026-07-12'
+    latest: true
+    highlights:
+      - 'MCP: edit tool descriptions, set tool prefixes and whitelists'
+      - Tidier profile output
+  - version: '1.0.136.0'
+    date: '2026-07-12'
+    highlights:
+      - iPad app hardware-keyboard support for right arrow key
+  - version: '1.0.136'
+    date: '2026-07-12'
+    breaking:
+      - Removed experimental folders feature
+    highlights:
+      - Persistent storage now via disks
+  - version: '1.0.135'
+    date: '2026-07-12'
+    highlights:
+      - Reorganized help output
+      - Improved config environment-variable handling
+  - version: '1.0.134'
+    date: '2026-07-12'
+    highlights:
+      - Better cloud-provider rate-limit handling
+      - Automatic VM recovery
+  - version: '1.0.133'
+    date: '2026-07-11'
+    highlights:
+      - iPhone app now runs on iPad with split-pane SSH terminal
+  - version: '1.0.127'
+    date: '2026-07-10'
+    breaking:
+      - Retired experimental gateways (superseded by profiles)
+  - version: '1.0.125'
+    date: '2026-07-10'
+    highlights:
+      - Fixed installer for Ubuntu/Debian shell compatibility
+  - version: '1.0.123'
+    date: '2026-07-10'
+    highlights:
+      - SSH startup commands for iPhone app terminal sessions

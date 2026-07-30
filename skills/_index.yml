@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: generated
+source: >-
+  Generated from machine0's documented MCP tools
+  (https://docs.machine0.io/mcp/overview) — every operation referenced is a real,
+  documented MCP tool name (see mcp/machine0-mcp.yml).
+description: >-
+  Packaged Agent Skills for machine0, grounded in the remote MCP server's
+  documented tools. Each skill mirrors a marquee VM lifecycle flow.
+skills:
+  - name: machine0-provision-agent-vm
+    file: machine0-provision-agent-vm.md
+    description: >-
+      Provision a persistent cloud VM for an agent, run a command on it, snapshot
+      it, then suspend to stop billing.
+    operations: [size_list, ssh_key_create_managed, vm_create, vm_get_by_name, ssh_exec, image_create, vm_suspend, vm_start, vm_destroy]

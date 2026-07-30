@@ -1,0 +1,1 @@
+{"resource":"https://app.machine0.io","authorization_servers":["https://app.machine0.io"],"jwks_uri":"https://app.machine0.io/api/auth/mcp/jwks","scopes_supported":["openid","profile","email","offline_access"],"bearer_methods_supported":["header"],"resource_signing_alg_values_supported":["RS256"]}
