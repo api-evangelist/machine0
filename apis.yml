@@ -12,6 +12,17 @@ description: >-
   compute charges. Every CLI command supports JSON output and the MCP server
   exposes the same machine, image, SSH-key and remote-exec operations to agents.
 url: https://raw.githubusercontent.com/api-evangelist/machine0/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
