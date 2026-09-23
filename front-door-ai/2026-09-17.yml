@@ -1,0 +1,28 @@
+# Front Door AI Index — machine0 — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: machine0
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: machine0.io
+  final_host: machine0.io
+  ownership: own
+  owner: machine0
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 22
+  host_score: 22
+  density: 24.75
+  words: 889
+  tiers:
+    agentic: 11
+    core: 0
+    model: 11
+  ambiguous: 9
+  top_terms:
+    Claude: 11
+    agent: 9
+    MCP: 6
+    prompts: 5
