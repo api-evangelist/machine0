@@ -64,6 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Machine0 is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Machine0 is a Y Combinator (S26)-backed infrastructure company, operated by Fundamental Software, that provides persistent, on-demand cloud virtual machines driven entirely from the command line and optimized for AI agents. The machine0 CLI ("Cloud VMs from the CLI") and a remote Model Context Protocol (MCP) server let you create, provision, snapshot, suspend and SSH into dedicated VMs — NixOS or Ubuntu, up to 60 vCPU / 240GB RAM with optional GPUs — across five regions (US East/West, UK, EU, Asia) with static IPs, HTTPS endpoints and per-minute billing. Suspend a VM to freeze its state and stop compute charges. Every CLI command supports JSON output and the MCP server exposes the same machine, image, SSH-key and remote-exec operations to agents.
 
-Backed by: y-combinator
+**Areas:** Company · Cloud · Infrastructure · Virtual Machines · AI Agents · Developer Tools · CLI · MCP
+
+## Machine0 on APIs.io
+
+Everything profiled for Machine0 is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/machine0/](https://apis.io/providers/machine0/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Machine0 Control Plane](https://apis.io/apis/machine0/machine0-control-plane/) — The machine0 control plane for creating, managing, snapshotting and connecting to persistent cloud VMs. Exposed as a CLI (npm @machine0/cli) and a remote…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [machine0](https://apis.io/servers/machine0/machine0/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Machine0 Authentication](https://apis.io/security/machine0/machine0-authentication/)
+- [Machine0 Domain Security](https://apis.io/security/machine0/machine0-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Machine0 Scopes](https://apis.io/scopes/machine0/machine0-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://machine0.io)
+- [Documentation](https://docs.machine0.io/introduction/overview)
+- [Pricing](https://docs.machine0.io/introduction/pricing)
+- [Changelog](https://machine0.io/changelog)
+- [Terms of service](https://machine0.io/terms)
+- [Privacy policy](https://machine0.io/privacy)
+- [GitHub](https://github.com/fdmtl)
+
+## API Evangelist rating
+
+**Kin Score 32.7** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 58.9 |
+| Access clarity | 38.2 |
+
+**Agent readiness 28.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/machine0/](https://apis.io/providers/machine0/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Machine0: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/machine0/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
